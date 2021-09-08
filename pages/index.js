@@ -33,9 +33,9 @@ const Index = () => {
   return (
     <>
       <Navbar />
-      {/* <CountryPicker /> */}
+      <CountryPicker />
       <Card details={details} />
-      <Chart />
+      <Chart details={details} />
     </>
   );
 };
