@@ -80,19 +80,24 @@ const Chart = ({ details: { confirmed, recovered, deaths }, country }) => {
             backgroundColor: "rgba(255, 0, 0, 0.5)",
             fill: true,
           },
-          {
-            data: dailyData.map((data) => data.recovered),
-            label: "Recovered",
-            borderColor: "green",
-            backgroundColor: "rgba(0, 255, 0, 0.5)",
-            fill: true,
-          },
+          // {
+          //   data: dailyData.map((data) => data.recovered),
+          //   label: "Recovered",
+          //   borderColor: "green",
+          //   backgroundColor: "rgba(0, 255, 0, 0.5)",
+          //   fill: true,
+          // },
         ],
       }}
     />
   ) : null;
 
-  return <div>{country ? barChart : lineChart}</div>;
+  return (
+    <>
+      <h3 className="w-4/5 mx-auto font-bold text-2xl">Global Data</h3>
+      <div className="w-full border">{country ? barChart : lineChart}</div>{" "}
+    </>
+  );
 };
 
 export default Chart;

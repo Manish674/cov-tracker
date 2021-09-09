@@ -33,7 +33,7 @@ const Index = () => {
   return (
     <>
       <Navbar />
-      <CountryPicker />
+      <CountryPicker details={details} setDetails={setDetails} />
       <Card details={details} />
       <Chart details={details} />
     </>
